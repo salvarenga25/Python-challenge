@@ -58,25 +58,25 @@ with open(csvOpen) as inputFile:
 
 
 #Printing the requested analysis into the console
-print("Financial Analysis")
-print("---------------------------")    
+print("\nFinancial Analysis\n")
+print("---------------------------\n")    
 print("Total Months: " + str(count))
 print("Total: $" + str(total))
 print("Average Change: $" + str(round(avgDiff,2)))
-print("Greatest Increase in Profits: " + GreatestIncreaseMonth + " $" + str(GreatestIncrease))
-print("Greatest Decrease in Profits: " + GreatestDecreaseMonth + " $" +  str(GreatestDecrease))
+print("Greatest Increase in Profits: " + GreatestIncreaseMonth + " ($" + str(GreatestIncrease)+ ")")
+print("Greatest Decrease in Profits: " + GreatestDecreaseMonth + " ($" +  str(GreatestDecrease) + ")\n")
 
 
 
 #opening and writing a txt file to output the analysis, the file is in the "Analysis" folder
 with open(csvOut, "w") as outFile:
-    outFile.write("Financial Analysis\n") 
+    outFile.write("Financial Analysis\n\n") 
     outFile.write("---------------------------\n")
-    outFile.write("Total Months: " + str(count))           
+    outFile.write("\nTotal Months: " + str(count))           
     outFile.write("\nTotal: $" + str(total))
     outFile.write("\nAverage Change: $" + str(round(avgDiff,2)))
-    outFile.write("\nGreatest Increase in Profits: " + GreatestIncreaseMonth + " $" + str(GreatestIncrease))
-    outFile.write("\nGreatest Decrease in Profits: " + GreatestDecreaseMonth + " $" +  str(GreatestDecrease))
+    outFile.write("\nGreatest Increase in Profits: " + GreatestIncreaseMonth + " ($" + str(GreatestIncrease) + ")")
+    outFile.write("\nGreatest Decrease in Profits: " + GreatestDecreaseMonth + " ($" +  str(GreatestDecrease) + ")")
    
     
 
